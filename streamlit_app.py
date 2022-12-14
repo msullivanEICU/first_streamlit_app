@@ -62,7 +62,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
+
 
 
 
@@ -82,6 +82,8 @@ if streamlit.button ('Get Fruit Load List'):
             my_data_rows = get_fruit_load_list()
             streamlit.dataframe(my_data_rows)
 streamlit.dataframe(my_data_rows)
+
+streamlit.stop()
 
 fruit_choice = streamlit.text_input('What fruit would you like to add?','jackfruit')
 streamlit.write('Thanks for adding ', fruit_choice)
